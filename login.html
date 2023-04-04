@@ -79,7 +79,25 @@
 
                         <input type="submit" class="login__button" value="LOGIN" />
                         $(if error)<br />
-                        <div class="errornotif" >$(error)</div>$(endif)
+                        <div class="errornotif" >
+                          <!--SCRIPT UBAH KETERANGAN ERROR OLEH FARIZ ANWAR-->
+                          <script type="text/javascript">
+                            var error = "$(error)";
+                            if (error == "simultaneous session limit reached") {
+                            document.write("Voucher/user <b>$(username)</b> sedang aktif diperangkat lain, silakan matikan wifi selama 1 menit lalu lakukan login kembali  ");
+                            }
+                            else if (error == "invalid password") {
+                            document.write("Password salah, Silakan hapus lalu Ketikkan kembali voucher/user secara manual ");
+                            }
+                            else if (error == "no valid profile found") {
+                            document.write("Sisa waktu untuk voucher <b>$(username)</b> sudah habis");
+                            }
+                            else if(error.search("not found") != -1) {
+                            document.write("Voucher yang kamu masukkan salah </br><b>Gunakan huruf kecil semua</b>");
+                            }
+                            else document.write("$(error)<br />")
+                          </script>
+                        </div>$(endif)
                         <div>
                             <span class="login__account">Login Member</span>
                             <span class="login__signin" id="sign-up">Klik Disini</span>
