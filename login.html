@@ -68,7 +68,8 @@
                     <form action="" class="login__registre" id="login-in">
                         <h1 class="login__title">Login Voucher</h1>
                         <div class="login__box">
-                            <i class='bx bx-user login__icon'></i>
+                            <!-- Mematikan icon user pada form voucher-->
+                            <!--<i class='bx bx-user login__icon'></i>-->
                         <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)/>
                         <input type="hidden" name="dst" value="$(link-orig)" />
                         <input type="hidden" name="popup" value="true" />
@@ -108,12 +109,14 @@
                           <input type="hidden" name="popup" value="true" />
     
                         <div class="login__box">
-                            <i class='bx bx-user login__icon'></i>
+                          <!--Mematikan icon user pada form member-->
+                            <!--<i class='bx bx-user login__icon'></i>-->
                             <input name="username" id="" class="login__input" type="text" value="$(username)" placeholder="ID Member"/>
                         </div>
     
                         <div class="login__box">
-                            <i class='bx bx-lock-alt login__icon'></i>
+                            <!--Mematikan icon lock/password pada form member-->
+                            <!--<i class='bx bx-lock-alt login__icon'></i>-->
                             <input name="password" type="password" id="nganu" class="login__input" placeholder="Password"/>
                         </div>
 
